@@ -12,6 +12,7 @@ cargo install --path .
 
 ```
 snip save NAME VALUE
+snip get NAME
 snip ls
 snip find QUERY
 snip rm NAME
@@ -22,6 +23,7 @@ snip help
 
 ```
 save NAME VALUE    Save a snippet. If NAME already exists, its value is overwritten.
+snip save NAME     Get a snippet. If NAME doesnt exist, it displays so.
 ls                 List all saved snippets.
 find QUERY         Search snippets by name. Matches any snippet whose name contains QUERY.
 rm NAME            Delete a snippet by name.
@@ -33,6 +35,7 @@ h                  Alias for help.
 
 ```
 snip save greet "hello world"
+snip get greet
 snip ls
 snip find gr
 snip rm greet
