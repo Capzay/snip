@@ -116,3 +116,17 @@ pub fn ls() {
         println!("{} = {}", s.name, s.value);
     }
 }
+
+pub fn get(args: Vec<String>) {
+    if args.len() == 3 {
+        let snippets = load_snippets();
+        let name = &args[2];
+        if let Some(s) = snippets.iter().find(|s| s.name == *name) {
+            println!("{}", s.value);
+        } else {
+            println!("No snippet named '{}'.", name);
+        }
+    } else {
+        println!("usage:    snip get <name>");
+    }
+}

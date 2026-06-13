@@ -20,6 +20,7 @@ fn main() {
 
     match args[1].as_str() {
         "save" => utils::save(args),
+        "get" => utils::get(args),
         "ls" => utils::ls(),
         "rm" => utils::rm(args),
         "h" => utils::help(),
